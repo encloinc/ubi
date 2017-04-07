@@ -112,7 +112,7 @@ def main():
 
         pycom = None
 
-        # Maybe I should check for if the current dir is the musicbot folder, just in case
+        # need to add current dir
 
         if sys.platform.startswith('win'):
             try:
@@ -143,7 +143,7 @@ def main():
 
                 os.execlp(pycom, pycom, 'run.py')
 
-        print("Please run the bot using python 3.5")
+        print("Please run Ubi Bot using python 3.5")
         input("Press enter to continue . . .")
 
         return
@@ -193,7 +193,7 @@ def main():
                 break
 
         except Exception as e:
-            if hasattr(e, '__module__') and e.__module__ == 'musicbot.exceptions':
+            if hasattr(e, '__module__') and e.__module__ == 'ubi.exceptions':
                 if e.__class__.__name__ == 'HelpfulError':
                     print(e.message)
                     break
